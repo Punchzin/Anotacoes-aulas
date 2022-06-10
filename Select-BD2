@@ -1,0 +1,43 @@
+Problema:
+Listar os nomes de todos os funcionarios, os salarios e as faixas de comissão
+
+solução:
+select nome_vend,sal_fixo, faixa_comiss 
+from vendedor;
+
+Problema:
+Listar o conteúdo de todas as tabelas da base de dados.
+
+solução:
+select *
+  from <nome-da-tabela>
+  
+Problema:
+Listar o numero do pedido, o codigo do produto e a quantidade
+pedida dos itens de um pedido, onde a quanridade pedida seja igual a 500
+
+solução:
+select noe_ped, cd_prod, qtd_ped
+  from item_pedido
+    where qtd_ped = 500
+    
+Problema:
+Liste todos os clientes localizados na cidade de São Paulo ou que tenham CEP entre 20000005
+e 20000010.
+
+solução:
+select nome_cli
+from cliente
+    where cidade = 'Sao Paulo' or (cep >= 20000005 and cep <= 20000010)
+    
+Problema: 
+Mostrar todos os pedidos que não tenham prazo de entrega superior a 15 dias.
+
+Observação:
+A prioridade do operador AND é maior do que a prioridade do operador OR;
+logo, neste exemplo, a utilização dos parenteses é opcional.
+
+solução:
+select num_ped
+from pedido
+    where NOT (prazo_entr > 15);
