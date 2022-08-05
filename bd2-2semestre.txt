@@ -18,3 +18,6 @@ where cliente.cod_cli = pedido.cd_cli;
 Problema: Quais são os clientes que têm pedidos com prazos de entrega superiores a 15 dias e que estão localizados nos estados de São Paulo ou do Rio de Janeiro?
 
 Solução:
+ SELECT nome_cli, cod_cli, num_ped, uf, prazo_entr
+	from cliente, pedido
+where pedido.prazo_entr > 15 and cliente.cidade = ("sao paulo" or "rio de janeiro");
