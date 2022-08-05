@@ -6,3 +6,10 @@ Faça uma junção da tabela de clientes com a de pedidos , exibindo o nome do c
 Solução:
 SELECT cod_cli,nome_cli,pedido.num_ped 
 FROM cliente,pedido;
+
+Problema: A que clientes estão associados os pedidos existentes? Listar pelos nomes dos clientes.
+
+Solução: 
+SELECT nome_cli, cod_cli, num_ped
+	from cliente, pedido
+where cliente.cod_cli = pedido.cd_cli;
