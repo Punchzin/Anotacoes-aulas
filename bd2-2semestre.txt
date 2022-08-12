@@ -31,9 +31,9 @@ where cliente.cod_cli=pedido.cd_cli and uf in ('rj','sp') and prazo_entr>15;
 Problema: Mostrar os pedidos dos clientes e seus respectivos prazos de entrega, ordenados do maior para o menor.
 
 Solução:
-SELECT cliente.nome_cli, pedido.prazo_entr
-FROM cliente, pedido
-ORDER BY pedido.prazo_entr DESC;
+SELECT num_ped, prazo_entr
+FROM pedido
+ORDER BY prazo_entr DESC;
 
 
 Problema: Exibir os vendedores (ordenados por nome) que emitiram pedidos com prazos de entrega superiores a 15 dias e que tenham salários fixos iguais ou superiores a R$1.000,00
