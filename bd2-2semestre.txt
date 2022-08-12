@@ -21,3 +21,7 @@ Solução:
  SELECT cliente.nome_cli, pedido.num_ped, cliente.uf, pedido.prazo_entr
 	from cliente, pedido
 where cliente.cod_cli = pedido.cd_cli and pedido.prazo_entr > 15 and cliente.uf = ( "SP" or "RJ");
+
+select nome_cli,uf,pedido.num_ped,pedido.prazo_entr
+from cliente,pedido
+where cliente.cod_cli=pedido.cd+cli and uf in ('rj','sp') and prazo_entr>15;
