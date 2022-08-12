@@ -27,4 +27,9 @@ select nome_cli,uf,pedido.num_ped,pedido.prazo_entr
 from cliente,pedido
 where cliente.cod_cli=pedido.cd_cli and uf in ('rj','sp') and prazo_entr>15;
 
-Problema: Exibir os vendedores (ordenados por nome) que emitiram pedidos com prazos de entrega superiores a 15 dias e que tenham salários fixos iguais ou superiores a R$1.000,00 
+Problema: Exibir os vendedores (ordenados por nome) que emitiram pedidos com prazos de entrega superiores a 15 dias e que tenham salários fixos iguais ou superiores a R$1.000,00
+
+Solução:
+SELECT nome_vend,pedido.num_ped,pedido.prazo_entr, sal_fixo 
+	FROM vendedor,pedido 
+WHERE vendedor.sal_fixo >= ("1000") and prazo_entr>15;
