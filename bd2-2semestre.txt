@@ -4,8 +4,8 @@ Problema:
 Faça uma junção da tabela de clientes com a de pedidos , exibindo o nome do cliente, o código do cliente e o numero do pedido
 
 Solução:
-SELECT cod_cli,nome_cli,pedido.num_ped 
-FROM cliente,pedido;
+SELECT cod_cli,nome_cli,pedido.num_ped, pedido.cd_cli
+FROM cliente,pedido WHERE cod_cli = cd_cli;
 
 Problema: A que clientes estão associados os pedidos existentes? Listar pelos nomes dos clientes.
 
