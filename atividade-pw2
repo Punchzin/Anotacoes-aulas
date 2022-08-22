@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: #B0E0E6;
+		}
+		</style>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style type="text/css">
+	.resize{
+		height: 55px;
+		width: 55px;
+	}
+	img
+</style>
+<script>
+	function moveAnanab(event){
+		let canvas = document.getElementById('myCanvas');
+		let context = canvas.getContext('2d');
+		let imagem = document.getElementById('ananab');
+		context.drawImage(imagem, event.offsetX, event.offsetY, 55,55);
+
+	}
+
+
+</script>
+
+
+
+	<canvas id="myCanvas" width="800" height="600" style="border:1px solid; background-color: #F0F8FF;" onmousemove="moveAnanab(event)"></canvas>
+
+	<img src="ananab.png" id="ananab" class="resize">
+
+
+</body>
+</html>
