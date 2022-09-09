@@ -54,3 +54,15 @@ and cidade = "Rio de Janeiro"
 and cliente.cod_cli = pedido.cd_cli
 and item_pedido.no_ped = pedido.num_ped
 ORDER BY nome_cli DESC;
+
+Problema: Mostre os nomes de todos os vendedores que venderam Chapa de Aco em quantidade superior a 300kg.
+
+Solução:
+SELECT nome_vend, qtd_ped, desc_prod
+FROM vendedor, item_pedido, pedido,produto
+WHERE desc_prod = "Chapa de Aco" 
+and qtd_ped > 300 
+and vendedor.cod_vend = pedido.cd_vend
+and pedido.num_ped = item_pedido.no_ped
+and produto.cod_prod = item_pedido.cd_prod
+ORDER BY nome_vend DESC;
