@@ -46,7 +46,11 @@ WHERE vendedor.sal_fixo >= ("1000") and prazo_entr>15;
 Problema: Exiba a relação dos clientes localizados no Rio de Janeiro (ordenados alfabeticamente) que tem pedidos do produto Chapa de Aco com prazos de entrega superiores a 15 dias.
 
 Solução:
-SELECT nome_cli, cidade, desc_prod, prazo_entr
-FROM pedido,cliente,produto
-WHERE prazo_entr > 15 and desc_prod = "Chapa de Aco" and cidade = "Rio de Janeiro" and cliente.cod_cli = pedido.cd_cli
+SELECT nome_cli, cidade, no_ped, prazo_entr,num_ped
+FROM pedido,cliente,produto, item_pedido
+WHERE prazo_entr > 15 
+and desc_prod = "Chapa de Aco" 
+and cidade = "Rio de Janeiro" 
+and cliente.cod_cli = pedido.cd_cli
+and item_pedido.no_ped = pedido.num_ped
 ORDER BY nome_cli DESC;
