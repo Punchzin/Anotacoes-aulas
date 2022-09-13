@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.50" />
-    
+
     <ImageView
         android:id="@+id/imgSaldo"
         android:layout_width="wrap_content"
@@ -37,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:src="@drawable/fatura"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraint_toBottomOf="@id/imgTransferencia"/>
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
