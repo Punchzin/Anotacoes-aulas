@@ -8,8 +8,9 @@ select count(distinct cod_cli)
 Problema: Quais vendedores ganham um salário fixo abaixo da média?
 
 Solução:
-select AVG(sal_fixo)
-	from vendedor V;
+select nome_vend, sal_fixo
+from vendedor
+WHERE sal_fixo < (SELECT AVG(sal_fixo) from vendedor);
 
 
 Problema: Que produtos estão incluidos em um pedido qualquer com a quantidade pedida igual a 100?
