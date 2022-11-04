@@ -16,3 +16,6 @@ WHERE sal_fixo < (SELECT AVG(sal_fixo) from vendedor);
 Problema: Que produtos estão incluidos em um pedido qualquer com a quantidade pedida igual a 100?
 
 Solução:
+SELECT cod_prod, desc_prod, qtd_ped, num_ped
+FROM produto, pedido, item_pedido 
+WHERE produto.cod_prod=item_pedido.cd_prod AND qtd_ped = 100;
