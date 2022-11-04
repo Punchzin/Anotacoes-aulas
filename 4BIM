@@ -8,6 +8,9 @@ select count(distinct cod_cli)
 Problema: Quais vendedores ganham um salário fixo abaixo da média?
 
 Solução:
+SELECT sal_fixo 
+FROM vendedor 
+WHERE sal_fixo <= '1580';
 
 Problema: Que produtos estão incluidos em um pedido qualquer com a quantidade pedida igual a 100?
 
