@@ -4,3 +4,11 @@ Solução:
 select count(distinct cod_cli)
 	from cliente C, pedido P, vendedor V
     where C.cod_cli=P.cd_cli and p.cd_vend=V.cod_vend and V.nome_vend='Ana Cristina';
+
+Problema: Quais vendedores ganham um salário fixo abaixo da média?
+
+Solução:
+
+Problema: Que produtos estão incluidos em um pedido qualquer com a quantidade pedida igual a 100?
+
+Solução:
