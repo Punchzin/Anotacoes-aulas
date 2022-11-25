@@ -20,3 +20,9 @@ SELECT cod_prod, desc_prod, qtd_ped, num_ped
 FROM produto, pedido, item_pedido 
 WHERE produto.cod_prod=item_pedido.cd_prod AND qtd_ped = 100 AND item_pedido.no_ped=pedido.num_ped
 GROUP BY produto.cod_prod;
+
+Problema:
+Cadastrar como clientes os vendedores que emitiram mais de 3 pedidos. Usar para o código de cliente o mesmo sódigo do vendedor. 
+O restante das colunas devem ser preenchidas com um espaço em branco.
+
+Solução:
