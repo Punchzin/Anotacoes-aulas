@@ -26,9 +26,9 @@ Cadastrar como clientes os vendedores que emitiram mais de 3 pedidos. Usar para 
 O restante das colunas devem ser preenchidas com um espaço em branco.
 
 Solução:
-INSERT INTO cliente (cod_cli,nome_cli,enderecocidade,cep,uf)
+INSERT INTO cliente (cod_cli, nome_cli, endereco, cidade, cep, uf)
 	SELECT cod_vend,nome_vend,' ',' ',' ',' '
     FROM vendedor V
-    WHERE 3<(select count (*)
-             FROM pedidos P
-             WHERE V.cod_vend=P.cd_vend;
+    WHERE 3<(select count(*)
+             FROM pedido P
+             WHERE V.cod_vend=P.cd_vend);
