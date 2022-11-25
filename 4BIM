@@ -37,4 +37,6 @@ Problema:
 Alterar o preço unitário do Cimento para R$5,00.
 
 Solução:
-update produto set val_unit=5.00 where desc_prod='Cimento';
+update produto
+set val_unit=5.00
+where desc_prod ='Cimento';
