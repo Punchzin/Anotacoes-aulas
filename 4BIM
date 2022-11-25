@@ -32,3 +32,9 @@ INSERT INTO cliente (cod_cli, nome_cli, endereco, cidade, cep, uf)
     WHERE 3<(select count(*)
              FROM pedido P
              WHERE V.cod_vend=P.cd_vend);
+
+Problema:
+Alterar o preço unitário do Cimento para R$5,00.
+
+Solução:
+update produto set val_unit=5.00 where desc_prod='Cimento';
