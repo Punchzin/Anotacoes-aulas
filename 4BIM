@@ -40,3 +40,9 @@ Solução:
 update produto
 set val_unit=5.00
 where desc_prod ='Cimento';
+
+Problema:
+Atualizar o salario fixo de todos os vendedores em 27% mais uma bonificação de R$100,00.
+
+Solução:
+update vendedor set sal_fixo= sal_fixo * 1.27 + 100;
