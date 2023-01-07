@@ -46,3 +46,7 @@ Atualizar o salario fixo de todos os vendedores em 27% mais uma bonificação de
 
 Solução:
 update vendedor set sal_fixo= sal_fixo * 1.27 + 100;
+
+
+SELECT cod_prod, desc_prod, num_ped, qtd_ped FROM produto, pedido, item_pedido 
+WHERE produto.cod_prod=item_pedido.cd_prod AND qtd_ped = '100' AND item_pedido.no_ped=pedido.num_ped;
